@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-commerce Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+      /* background-color: #fff; */
+      background-color: #00475c;
+    }
+
+    .logo {
+      /* font-size: 1.8rem;
+      font-weight: bold;
+      color: #00475c; */
+      /* height: 20px;
+      width: 20px; */
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      margin-left: 20%;
+      width: 50%;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scrolling image gallery */
+    .image-scroller {
+      overflow-x: hidden; /* hide scrollbar since we'll auto scroll */
+      scroll-snap-type: x mandatory;
+      display: flex;
+      gap: 1rem;
+      
+      padding: 1rem 0;
+      height: 400px;
+      width: 98%;
+      margin-left: 1%;
+      margin-right: 1%;
+      /* padding: auto; */
+      align-items: center;
+      /* background-color: #f8f8f8; */
+      -webkit-overflow-scrolling: touch;
+      position: center;
+    }
+
+    .image-track {
+      display: flex;
+      gap: 1rem;
+         padding-left: 5%;
+      padding-right: 5%;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth; /* smooth scrolling */
+      width: max-content; /* fit to content width */
+    }
+
+    .image-track img {
+      /* flex: 0 0 85%; */
+      height: 350px;
+
+      border-radius: 10px;
+      object-fit: cover;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+    .Intro{
+      text-align: center;
+      background-color: #00475c;
+      color: white;
+      margin-left: 1%;
+      margin-right: 1%;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+
+    }
+    #A1{
+text-align: justify;
+
+    }
+    /* Product Section */
+    .product-section {
+      padding: 2rem;
+      /* width: 98%; */
+      background-color: #fefefe;
+    }
+
+    .products {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 230px;
+      text-align: center;
+      transition: 0.3s;
+      background-color: #fff;
+    }
+
+    .product:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: fill;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+      color: #00475c;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #00475c;
+      color: white;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .developer {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="vas logo.png" alt="Image 10" width="100px",height = "100px"/>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About.html">About Us </a>
+      <a href="Products .html">Product </a>
+      <a href="Carrers.html">Career </a>
+      <a href="#">News </a>
+      <a href="#">Gallery</a>
+      <a href="#">contact Us </a>
+    </nav>
+  </header>
+
+  <!-- Auto-scrolling Image Gallery -->
+  <div class="image-scroller" id="imageScroller">
+    <div class="image-track" id="imageTrack">
+      <img src="Auto img1.png" alt="Image 1" />
+      <img src="Auto img2.png" alt="Image 1" />
+      <img src="auto img3.png" alt="Image 2" />
+      <img src="Auto img4.png" alt="Image 3" />
+      <img src="Auto img5.jpeg" alt="Image 4" />
+      <img src="auto img6.jpeg" alt="Image 5" />
+       <img src="auto img7.jpeg" alt="Image 1" />
+      <img src="auto img8.jpeg" alt="Image 1" />
+      <img src="auto img9.jpeg" alt="Image 2" />
+      <img src="auto img10.jpeg" alt="Image 3" />
+      <img src="auto img11.jpeg" alt="Image 4" />
+      
+    </div>
+  </div>
+<div class="Intro">
+<h1>
+  Welcome To Vardhman Airport 
+</h1>
+
+<div id="A1">
+  Vardhman Airport Solutions Pvt Ltd is a premier organization providing quality products, solutions and services for Airfield Lighting system, Visual docking guidance system, Photometric equipment & other airside systems for commercial & defence airports to elevate the airport infrastructure to the next level. We are one of the leading solution provider and installers of airfield ground lighting equipment and many more mission critical airside solutions. We have capability to deliver end to end Airfield lighting projects with qualified teams available to take care of AGL designing, Site Installation, Commissioning and Service support. Whether this be, the provision of a full turnkey design and installation package, the supply only of products, after sales support, or maintenance testing of systems, we will advise on your needs and provide you with a delivery proposal to fit your requirements. Our USP is the deep understanding of Airport solutions market and in-depth field experience. This allows us to offer best value to our customers with superior products, solutions and services at reasonable prices. Located in Delhi, India, we are customer agnostic, keeping their best interests in mind, by being flexible with our approach, creative with our thinking, competitive with our pricing and always working to make interacting with you an exceptional experience.
+​The company has been promoted by senior industry professionals with proven track record working in global MNC’s. The promotors bring with best international practices in Airport solutions with hands on experience of almost 20 years. The company is well supported by Vardhman Group with an annual turnover of more than Rs. 350 Crores FY 2016 and having presence across India. There are two directors on the company board Mr. Sushim Jain and Mr. Anshul Jain as on date.
+We are distributor of ATG Airports, FB technology, RLG Docking Systems, Unika and many more OEMs which help us to deliver the best solutions for Airports. The equipment offered are designed to meet IEC, FAA, and ICAO requirements.
+</div>
+
+</div>
+  <!-- Product Section -->
+  <section class="product-section">
+    <h2 style="text-align: center; color: #00475c;">Featured Products</h2>
+    <div class="products">
+        
+      <div class="product">
+        <a href="product1.html">
+        <img src="Approch Light.png" alt="Product 1" />
+        <h3> Elevated Approch Led Light </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="REl Light.png" alt="Product 1" />
+        <h3>Elevated REL LED  Light </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="Taxiway Light.jfif" alt="Product 2" />
+        <h3>Elevated taxi Way light</h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="rgl.jfif" alt="Product 3" />
+        <h3>Elevated Runway Guard Light </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="inset light.jfif" alt="Product 3" />
+        <h3>Inset Approch light </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="inset light.jfif" alt="Product 3" />
+        <h3>Inset Taxiway Light </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="signboard.png" alt="Product 3" />
+        <h3>Sign Board </h3>
+        <p>Used For Airfield Purpose.</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product1.html">
+        <img src="heliport light.jfif" alt="Product 3" />
+        <h3>Heliport light </h3>
+        <p>Used For helipad Purpose.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="developer">Developed by Your Name</div>
+  </footer>
+
+<script>
+  const scroller = document.getElementById('imageScroller');
+  const track = document.getElementById('imageTrack');
+  const images = track.querySelectorAll('img');
+  let currentIndex = 0;
+
+  function scrollToNextImage() {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+    // Calculate scrollLeft to the image's offsetLeft
+    const scrollPos = images[currentIndex].offsetLeft - track.offsetLeft;
+    scroller.scrollTo({
+      left: scrollPos,
+      behavior: 'smooth'
+    });
+  }
+
+  // Scroll every 3 seconds
+  setInterval(scrollToNextImage, 1500);
+</script>
+
+</body>
+</html>
